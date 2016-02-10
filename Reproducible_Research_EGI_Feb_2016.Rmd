@@ -99,6 +99,31 @@ img <- readPNG("Images/News.png")
 
 
 
+
+
+## How reproducible research could help you
+
+* New raw data becomes available
+
+* Returning to a project after a period of time
+
+* Project is handed over to someone else (new postdoc, new PhD student)
+
+* You seriously screw things up
+
+* Dealing with pre-/post-publication peer review
+
+<br>
+<br>
+
+<p align="right">
+<font size = '3'>
+Nicked from https://susanejohnston.files.wordpress.com/2016/02/reproducible-research.pdf
+</font>
+</p>
+
+
+
 ## Reproducibility and replicability
 <br>
 <br>
@@ -116,14 +141,24 @@ img <- readPNG("Images/News.png")
 
 
 ## Requirements for reproducible research
-<br>
-<br>
 
 * Data are available
 
 * Methods/analyses are transparent
 
+```{r fig.width=6,fig.height=2}
+img <- readPNG("Images/Reproducibility_spectrum.png")
+ grid.raster(img)
+```
+<br>
+<br>
 
+
+<p align="right">
+<font size = '3'>
+Peng *et al.* (2012) *Science*
+</font>
+</p>
 
 
 
@@ -146,11 +181,12 @@ img <- readPNG("Images/Dryad.png")
 
 
 
-## Data availability
+## Data availability - not a panacea
 
 * Usually tidied data uploaded
 * What has been done to the raw data?
 * Any possibility of errors?
+* *How have the data been analysed?*
 
 <br>
 
@@ -172,6 +208,141 @@ img <- readPNG("Images/Dryad.png")
 * What exploratory analyses were done?
 
 * How did you create your final analyses/figures?
+
+```{r fig.width=6,fig.height=2}
+img <- readPNG("Images/Excel.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+##Tools for reproducible research - R
+
+- All analyses and figures are documented in a script
+- Free
+- Highly flexible
+- Can also be used for data manipulation
+
+
+```{r fig.width=2,fig.height=2}
+img <- readPNG("Images/R_logo.png")
+ grid.raster(img)
+```
+
+<br>
+
+<p align="right">
+<font size = '3'>
+https://www.r-project.org
+</font>
+</p>
+
+
+
+##Tools for reproducible research - R
+
+```{r echo=T, fig.width=3,fig.height=3}
+
+#Generate some data
+x <- sample(10)
+y <- sample(10)
+
+#Make a plot
+plot(y~x)
+```
+
+
+
+
+
+
+
+## R can be irreproducible
+
+<br>
+<br>
+
+```{r echo=T, eval=F}
+
+setwd('My Documents/Old papers/Great tit paper 21/FINAL FINAL VERSION 11')
+mydata <- read.table('final data.txt')
+
+plot(mydata)
+
+```
+
+
+
+
+
+
+
+
+
+##Tools for reproducible research - R markdown / knitr
+
+* R Markdown - language for authoring reports/papers/presentations that can include R code http://rmarkdown.rstudio.com
+
+* knitr - R package that processes R markdown scripts and turns them into reports/slides http://yihui.name/knitr/ 
+
+* Integrated into Rstudio https://www.rstudio.com
+
+
+
+
+##Tools for reproducible research - R markdown / knitr
+
+This code....
+```{r echo=T,eval=F}
+We studied `r nrow(mydata)` great tits
+```
+<br>
+
+Gives you this...
+```{r echo=T,eval=F}
+We studied 50 great tits
+```
+
+
+
+
+##Tools for reproducible research - R markdown / knitr
+
+This is the code for this slide:
+
+```{r fig.width=5,fig.height=3}
+img <- readPNG("Images/Markdown_slide.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+
+##Tools for reproducible research - R markdown / knitr
+
+```{r fig.width=7,fig.height=4}
+img <- readPNG("Images/Markdown_ms.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 
