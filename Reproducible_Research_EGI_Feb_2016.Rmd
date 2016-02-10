@@ -1,0 +1,179 @@
+---
+output: ioslides_presentation
+---
+
+```{r include=F}
+library(png)
+library(grid)
+library(knitr)
+
+opts_chunk$set(echo=FALSE,
+               warning=FALSE,
+               message=FALSE,
+               fig.width= 5,
+               fig.height= 5,
+               fig.align='center')
+
+```
+
+
+
+
+
+
+## Reproducible Research
+
+```{r fig.height=4}
+img <- readPNG("Images/Irreproducible.png")
+ grid.raster(img)
+```
+
+
+<center>
+Lewis Spurgin
+
+EGI meeting, February 2016
+</center>
+
+
+
+
+
+## A reproducibility crisis?
+
+```{r}
+img <- readPNG("Images/Reinhart.png")
+ grid.raster(img)
+```
+
+
+
+
+
+## A reproducibility crisis?
+
+<div class="columns-2">
+
+```{r fig.width=4}
+img <- readPNG("Images/Reinhart.png")
+ grid.raster(img)
+```
+
+<br>
+"In their Excel spreadsheet, Reinhart and Rogoff had not selected the entire row when averaging growth figures: they omitted data from Australia, Austria, Belgium, Canada and Denmark... "
+
+</div>
+
+
+
+
+
+
+## A reproducibility crisis?
+
+<div class="columns-2">
+
+```{r fig.width=4}
+img <- readPNG("Images/Reinhart.png")
+ grid.raster(img)
+```
+
+<br>
+"For an economist, the five most terrifying words in the English language are: I can't replicate your results. But for economists Carmen Reinhart and Ken Rogoff of Harvard, there are seven even more terrifying ones: I think you made an Excel error."
+
+</div>
+
+
+
+
+
+
+
+## A reproducibility crisis?
+
+```{r fig.width=6,fig.height=4}
+img <- readPNG("Images/News.png")
+ grid.raster(img)
+```
+
+
+
+
+## Reproducibility and replicability
+<br>
+<br>
+
+* **Replicability** is the ability to replicate results after completely performing an experiment again from scratch.
+
+* **Reproducibility** is the ability to reproduce the same results from a dataset that has already been generated.
+
+
+
+
+
+
+
+
+
+## Requirements for reproducible research
+<br>
+<br>
+
+* Data are available
+
+* Methods/analyses are transparent
+
+
+
+
+
+
+
+## Data availability
+
+* Now a requirement for many journals and funding agencies
+* Gets you more citations
+* Long-term storage of data
+
+<br>
+
+```{r fig.width=6,fig.height=2}
+img <- readPNG("Images/Dryad.png")
+ grid.raster(img)
+```
+
+
+
+
+
+## Data availability
+
+* Usually tidied data uploaded
+* What has been done to the raw data?
+* Any possibility of errors?
+
+<br>
+
+```{r fig.width=6,fig.height=2}
+img <- readPNG("Images/Dryad.png")
+ grid.raster(img)
+```
+
+
+
+
+
+## Transparency in methods/analysis
+
+* How were the data formatted?
+  
+* How were the data cleaned?
+  
+* What exploratory analyses were done?
+
+* How did you create your final analyses/figures?
+
+
+
+
+
