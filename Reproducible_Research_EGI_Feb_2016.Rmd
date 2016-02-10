@@ -39,7 +39,7 @@ EGI meeting, February 2016
 
 
 
-## A reproducibility crisis?
+## An economics study
 
 ```{r}
 img <- readPNG("Images/Reinhart.png")
@@ -50,7 +50,7 @@ img <- readPNG("Images/Reinhart.png")
 
 
 
-## A reproducibility crisis?
+## A dodgy economics study
 
 <div class="columns-2">
 
@@ -60,7 +60,7 @@ img <- readPNG("Images/Reinhart.png")
 ```
 
 <br>
-"In their Excel spreadsheet, Reinhart and Rogoff had not selected the entire row when averaging growth figures: they omitted data from Australia, Austria, Belgium, Canada and Denmark... "
+"In their Excel spreadsheet, Reinhart and Rogoff had not selected the entire row when averaging growth figures: they omitted data from Australia, Austria, Belgium, Canada and Denmark... When that error was corrected, the '0.1% decline' data became a 2.2% average increase in economic growth."
 
 </div>
 
@@ -68,20 +68,6 @@ img <- readPNG("Images/Reinhart.png")
 
 
 
-
-## A reproducibility crisis?
-
-<div class="columns-2">
-
-```{r fig.width=4}
-img <- readPNG("Images/Reinhart.png")
- grid.raster(img)
-```
-
-<br>
-"For an economist, the five most terrifying words in the English language are: I can't replicate your results. But for economists Carmen Reinhart and Ken Rogoff of Harvard, there are seven even more terrifying ones: I think you made an Excel error."
-
-</div>
 
 
 
@@ -101,27 +87,6 @@ img <- readPNG("Images/News.png")
 
 
 
-## How reproducible research could help you
-
-* New raw data becomes available
-
-* Returning to a project after a period of time
-
-* Project is handed over to someone else (new postdoc, new PhD student)
-
-* You seriously screw things up
-
-* Dealing with pre-/post-publication peer review
-
-<br>
-<br>
-
-<p align="right">
-<font size = '3'>
-Nicked from https://susanejohnston.files.wordpress.com/2016/02/reproducible-research.pdf
-</font>
-</p>
-
 
 
 ## Reproducibility and replicability
@@ -140,25 +105,61 @@ Nicked from https://susanejohnston.files.wordpress.com/2016/02/reproducible-rese
 
 
 
+
+## When might you want to reproduce research?
+
+* New raw data becomes available
+
+* Returning to a project after a period of time
+
+* Project is handed over to someone else (new postdoc, new PhD student)
+
+* You seriously screw things up
+
+* Dealing with pre-/post-publication peer review
+
+<br>
+<br>
+
+<p align="right">
+<font size = '3'>
+Nicked from https://susanejohnston.files.wordpress.com/2016/02/reproducible-research.pdf
+</font>
+</p>
+
+
+
+
+
+
+## When might others want to reproduce your research?
+
+* Meta-analyses
+
+* Software development
+
+* Paramaterise simulations
+
+* Post-publication peer-review
+
+* Checking extraordinary claims
+
+
+
+
+
+
+
+
 ## Requirements for reproducible research
+
+<br>
 
 * Data are available
 
 * Methods/analyses are transparent
 
-```{r fig.width=6,fig.height=2}
-img <- readPNG("Images/Reproducibility_spectrum.png")
- grid.raster(img)
-```
-<br>
-<br>
 
-
-<p align="right">
-<font size = '3'>
-Peng *et al.* (2012) *Science*
-</font>
-</p>
 
 
 
@@ -205,12 +206,25 @@ img <- readPNG("Images/Dryad.png")
   
 * How were the data cleaned?
   
+
+```{r fig.width=4,fig.height=4}
+img <- readPNG("Images/Excel.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+## Transparency in methods/analysis
+
 * What exploratory analyses were done?
 
 * How did you create your final analyses/figures?
 
-```{r fig.width=6,fig.height=2}
-img <- readPNG("Images/Excel.png")
+```{r fig.width=4,fig.height=4}
+img <- readPNG("Images/SPSS.png")
  grid.raster(img)
 ```
 
@@ -222,6 +236,7 @@ img <- readPNG("Images/Excel.png")
 
 ##Tools for reproducible research - R
 
+- Programming language for statistical computing
 - All analyses and figures are documented in a script
 - Free
 - Highly flexible
@@ -233,7 +248,6 @@ img <- readPNG("Images/R_logo.png")
  grid.raster(img)
 ```
 
-<br>
 
 <p align="right">
 <font size = '3'>
@@ -268,7 +282,7 @@ plot(y~x)
 
 ```{r echo=T, eval=F}
 
-setwd('My Documents/Old papers/Great tit paper 21/FINAL FINAL VERSION 11')
+setwd('My Documents/Great tit paper 21/FINAL FINAL VERSION 11')
 mydata <- read.table('final data.txt')
 
 plot(mydata)
@@ -290,6 +304,13 @@ plot(mydata)
 * knitr - R package that processes R markdown scripts and turns them into reports/slides http://yihui.name/knitr/ 
 
 * Integrated into Rstudio https://www.rstudio.com
+
+* Can produce **dynamic documents**
+
+
+
+
+
 
 
 
@@ -342,7 +363,75 @@ img <- readPNG("Images/Markdown_ms.png")
 
 
 
+##Tools for reproducible research - version control
 
+```{r fig.width=7,fig.height=4}
+img <- readPNG("Images/Version_control.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+
+##Tools for reproducible research - Github
+
+```{r fig.width=7,fig.height=4}
+img <- readPNG("Images/Github.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+##Reproducibility spectrum
+
+```{r fig.width=7,fig.height=4}
+img <- readPNG("Images/Reproducibility_spectrum.png")
+ grid.raster(img)
+```
+
+
+
+
+
+
+
+##Caveats
+
+* Reproducible research does not equal good research!
+
+* Takes investment of time
+
+* Scooping
+
+* Fear for career if mistakes made?
+
+
+
+
+
+
+
+
+
+##Reproducible research...
+
+* Is it desirable?
+
+* Is it worth the effort?
 
 
 
